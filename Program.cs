@@ -1,4 +1,23 @@
-﻿Televisao tv = new Televisao (55f);
+﻿using System;
 
+class Program
+{
+    static void Main(string[] args)
+    {
+        Televisao tv = new Televisao();
 
-Console.WriteLine($"A tv tem o tamanho {tv.Tamanho}");
+        tv.LigarTV();
+
+        // Testes de canais
+        tv.IrParaCanal(10);
+        tv.PassarCanalAcima();
+        tv.PassarCanalAbaixo();
+        tv.IrParaCanal(600); // inválido
+
+        // Testes de volume
+        tv.AumentarVolume();
+        tv.ReduzirVolume();
+        tv.AtivarMudo();
+        tv.AtivarMudo();
+    }
+}
